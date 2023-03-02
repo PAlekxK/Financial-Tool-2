@@ -1,0 +1,28 @@
+
+# -------------------------- Account Hierarchies ---------------------------
+
+# Field lists
+# -> These lists define the fields used for the 
+field_list:
+    Assets:
+        Retirement: ["Porsche_401k", "BCG_401k"]
+        Heavy_Assets: ["Home_Value","Car"]
+        Business: ['GKW_Value']
+        Investments: ["Coinbase", "Ally_Stocks"]
+        Cash: ["BoA_Checking","Ally_Checking","Ally_Savings"]
+                               
+    
+    Liabilities: 
+        Home_Mortgage: ["Home_Mortgage", "Home_Loan_401k"]
+        Free_Financing: ["IdealImage_Loan", "CreditCard_Sweetwater"]
+        Credit_Cards: ["CreditCard_BoA", "CreditCard_Amex_Personal", "CreditCard_Amex_Corporate", "CreditCard_Amazon", "CreditCard_Apple"]
+        Car_Loan: ["Car_Loan"]
+        
+column_names: ["Date","Porsche_401k", "BCG_401k", "Home_Value","Car", 'GKW_Value', "Coinbase", "Ally_Stocks", "BoA_Checking","Ally_Checking","Ally_Savings", "CreditCard_BoA", "CreditCard_Amex_Personal", "CreditCard_Amex_Corporate", "CreditCard_Amazon", "CreditCard_Apple", "IdealImage_Loan", "CreditCard_Sweetwater", "Car_Loan", "Home_Mortgage", "Home_Loan_401k"]
+
+Assets: ["Porsche_401k", "BCG_401k", "Home_Value","Car", 'GKW_Value', "Coinbase", "Ally_Stocks", "BoA_Checking", "Ally_Checking", "Ally_Savings"]
+                               
+Liabilities: ["CreditCard_BoA", "CreditCard_Amex_Personal", "CreditCard_Amex_Corporate", "CreditCard_Amazon", "CreditCard_Apple", "IdealImage_Loan", "CreditCard_Sweetwater", "Car_Loan", "Home_Mortgage", "Home_Loan_401k"]
+
+#must be a string (not a list) for the yfinance formula to read correctly
+Stocks_to_fetch: "DJIA, SPY, VFIAX"
